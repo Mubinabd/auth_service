@@ -38,4 +38,4 @@ insert into book(name, author_id) values('Qo''rqma', 1),('Ona', 1);
 select b.id, b.name, author_id, a.name from book as b
 join author as a on true;
 
-select a.id, a.name, b.name from author a left join book b on b.author_id=a.id;
+select a.id, a.name, b.name from author a full join book b on b.author_id=a.id;
