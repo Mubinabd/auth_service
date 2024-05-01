@@ -45,3 +45,54 @@ INSERT INTO employee_task (employee_id, task_id) VALUES
  select et.id, e.name, t.description from employee_task et
  join employee e on e.id=et.employee_id
  join task t on t.id=et.task_id;
+
+ -- Student table
+ -- course table
+ -- student_course table
+ -- grade table
+
+ -- 1. grade tabledagi student_id va course_id o'rniga student_course tabledagi 
+ -- idni olishimiz darkor;
+
+ -- 2. guruhdagi eng yaxshi o'qiydigan studentlarni har guruh bo'yicha chiqaring. Agarda
+ -- eng yaxshi baholar bir nechta kishida bo'lsa, hammasi chiqsin.
+
+ -- 3. guruhning o'rtacha bahosini har bir guruh bo'yicha chiqaring;
+ 
+ -- 4. eng yosh o'quvchi guruh bo'yicha chiqarilsin chiqarilsin;
+ -- yani gar bir guruhdan eng yosh o'quvchi(bir nechta bo'lsa har birini)
+
+ -- 5. eng yaxshi o'qiydigan guruh chiqarilsin
+ -- ya'ni, har bir guruhning o'rtacha bahosining eng katta(yaxshi) bo'lgani
+
+ create table if not exists students(
+    id uuid primary key default gen_random_uuid(),
+    name varchar not null,
+    age int not null,
+    created_at timestamp default now(),
+    deleted_at timestamp default null
+);
+
+create table if not exists courses(
+    id uuid primary key default gen_random_uuid(),
+    name varchar not null,
+    created_at timestamp default now(),
+    deleted_at timestamp default null
+);
+
+create table if not exists student_courses(
+    id uuid primary key default gen_random_uuid(),
+    student_id uuid references students(id),
+    course_id uuid references courses(id),
+    created_at timestamp default now(),
+    deleted_at timestamp default null
+);
+
+create table if not exists grades(
+    id uuid primary key default gen_random_uuid(),
+    student_id uuid references students(id),
+    course_id uuid references courses(id),
+    grade int not null default 0,
+    created_at timestamp default now(),
+    deleted_at timestamp default null
+);
