@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS transaction (
     description TEXT,
     payment_type payment_type,
     from_card UUID REFERENCES card(id),
-    to_card UUID REFERENCES default null card(id),
+    to_card UUID default null REFERENCES card(id),
     payment_name varchar default null,
     created_at TIMESTAMP default now(),
     updated_at TIMESTAMP default now(),
