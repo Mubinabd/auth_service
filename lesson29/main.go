@@ -76,7 +76,20 @@ func main() {
 
 	// fmt.Println(res)
 
-	db.Where(&Book{ Page: 288}).Model(&b).Updates(&Book{Name: "efhuef", Page: 103})
-
-	db.Delete(&Book{}, 3)
+	db.Where(&Book{ Page: 293}).Model(&b).Update("student_id", 2)
+  // Update user
+//   updatedUser := models.User{
+//     ID:       "*****", // Don't forget to replace it to yours
+//     Name:     "George",
+//     Username: "gorge",
+//     Password: "newpass",
+//     Phone:    "00094223006",
+//   }
+//   um.Update(&updatedUser)
+//   cf.CheckErr(db.Error)
+//   fmt.Println("User updated")
+	// db.Delete(&Book{}, 3)
 }
+// func (um *UserManager) Update(user *models.User) error {
+// 	return um.db.Save(user).Error
+//   }
