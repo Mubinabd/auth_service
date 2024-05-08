@@ -1,0 +1,4 @@
+github.com/go-faker/faker/v3 v3.0.0-20220609044348-463a3727a796 h1:5ATs24hr7nnRZD2ijsTTDiqJEfgimttOnUV6FfF2pKE=
+github.com/go-faker/faker/v3 v3.0.0-20220609044348-463a3727a796/go.mod h1:n78QiVpGOFXx9Xpn4g6urBnMuxko237nxPmFmLeo3o8=
+github.com/lib/pq v1.10.9 h1:YXG7RB+JIjhP29X+OtkiDnYaXQwpS4JEWq7dtCCRUEw=
+github.com/lib/pq v1.10.9/go.mod h1:AlVN5x4E4T544tWzH6hKfbfQvm3HdbOxrmggDNAPY9o=
