@@ -1,0 +1,142 @@
+[
+    [
+        {
+            "_comment": "THIS IS USERS'S JSON QUERIES"
+        },
+
+        {
+            "_comment": "This is a json code to create user",
+    
+            "name": "Azizbek Qodirov",
+            "email": "azizbekqodirov@gmail.com",
+            "phone_number": "+998900050505",
+            "birthday": "1998-08-20",
+            "gender": "m"
+        },
+        {
+            "_comment": "This is a json code to update user",
+
+            "id": "*****",
+            "name": "Azizbek Qodirov",
+            "email": "azizbekqodirov@gmail.com",
+            "phone_number": "+998900050505",
+            "birthday": "1998-08-20",
+            "gender": "m"
+        }
+    ],
+
+    [
+        {
+            "_comment": "THIS IS RESUME'S JSON QUERIES"
+        },
+
+        {
+            "_comment": "This is a json code to create resume",
+    
+            "position": "Software Engineer",
+            "experience": 5,
+            "description": "Experienced in full stack development",
+            "user_id": "*****"
+        },
+        {
+            "_comment": "This is a json code to update resume",
+
+            "id": "*****",
+            "position":"Frontend Developer",
+            "experience": 6,
+            "description": "Experienced in frontend development"
+        }
+    ],
+
+    [
+        {
+            "_comment": "THIS IS COMPANY'S JSON QUERIES"
+        },
+
+        {
+            "_comment": "This is a json code to create company",
+
+            "name": "TechnoPark",
+            "location": "Uzbekistan",
+            "workers": 100
+        },
+        {
+            "_comment":"This is a json code to update company",
+
+            "id": "*****",
+            "name": "CrimeHub",
+            "location": "Uzbekistan",
+            "workers": 100
+        }
+    ],
+
+    [
+        {
+            "_comment": "THIS IS RECRUITER'S JSON QUERIES"
+        },
+
+        {
+            "name": "Anna Smith",
+            "email": "annasmith@gmail.com",
+            "phone_number": "+998925205522",
+            "birthday": "2006-11-23",
+            "gender": "f",
+            "company_id": "*****"
+        },
+        {
+            "_comment":"This is a json code to update recruiter",
+
+            "id": "*****",
+            "name": "Jim Carry",
+            "email": "jimcarry@gmail.com",
+            "phone_number": "+998925205522",
+            "birthday": "2014-11-23",
+            "gender": "m"
+        }
+    ],
+
+    [
+        {
+            "_comment": "THIS IS VACANCY'S JSON QUERIES"
+        },
+
+        {
+            "_comment": "This is a json code to create vacancy",
+            "name": "We need a backend developer",
+            "position": "Backend Developer",
+            "experience": 5,
+            "company_id": "*****",
+            "description": "Experienced in full stack development"
+        },
+        {
+            "_comment": "This is a json code to update vacancy",
+            "id": "*****",
+            "name": "Software Engineer",
+            "position": "Senior Developer",
+            "experience": 5,
+            "description": "Responsible for developing and maintaining software applications."
+        }
+    ],
+
+    [
+        {
+            "_comment": "THIS IS INTERVIEW'S JSON QUERIES"
+        },
+
+        {
+            "_comment": "This is a json code to create interview",
+            "user_id": "*****",
+            "vacancy_id": "*****",
+            "recruiter_id": "*****",
+            "date": "2024-07-20"
+        },
+        {
+            "_comment": "This is a json code to update interview",
+            "id": "*****",
+            "user_id": "*****",
+            "vacancy_id": "*****",
+            "recruiter_id": "*****",
+            "date": "2024-07-20"
+        }
+    ]
+]

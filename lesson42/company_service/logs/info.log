@@ -1,0 +1,221 @@
+[INFO]  2024/05/19 15:38:16 main.go:37: Server started on port 8080
+[INFO]  2024/05/19 15:38:28 user.go:19: User created
+[ERROR]  2024/05/19 15:38:36 user.go:15: User not created:  pq: invalid input syntax for type timestamp: "200611-29"
+[INFO]  2024/05/19 15:50:57 main.go:37: Server started on port 8080
+[ERROR]  2024/05/19 15:50:59 user.go:28: User not updated pq: invalid input syntax for type uuid: ""
+[INFO]  2024/05/19 15:52:43 user.go:32: User updated
+[INFO]  2024/05/19 15:55:28 main.go:37: Server started on port 8080
+[INFO]  2024/05/19 15:57:16 main.go:37: Server started on port 8080
+[INFO]  2024/05/19 15:57:32 main.go:37: Server started on port 8080
+[INFO]  2024/05/19 15:57:33 user.go:55: User deleted
+[INFO]  2024/05/19 16:25:08 main.go:39: Server started on port 8080
+[INFO]  2024/05/19 16:25:53 user.go:43: User created
+[INFO]  2024/05/19 16:26:16 user.go:43: User created
+[INFO]  2024/05/19 16:26:38 user.go:43: User created
+[INFO]  2024/05/19 16:26:56 user.go:43: User created
+[INFO]  2024/05/19 16:27:23 user.go:43: User created
+[INFO]  2024/05/19 16:27:55 user.go:43: User created
+[INFO]  2024/05/19 16:28:24 user.go:43: User created
+[INFO]  2024/05/19 16:30:03 user.go:56: User updated
+[INFO]  2024/05/19 16:31:41 main.go:39: Server started on port 8080
+[INFO]  2024/05/19 16:32:43 main.go:39: Server started on port 8080
+[INFO]  2024/05/19 16:40:45 main.go:39: Server started on port 8080
+[INFO]  2024/05/19 16:42:54 main.go:39: Server started on port 8080
+[INFO]  2024/05/19 16:48:56 main.go:39: Server started on port 8080
+[INFO]  2024/05/19 16:54:49 main.go:47: Server started on port 8080
+[INFO]  2024/05/19 16:59:10 main.go:39: Server started on port 8080
+[INFO]  2024/05/19 17:01:54 main.go:39: Server started on port 8080
+[INFO]  2024/05/19 17:06:34 main.go:39: Server started on port 8080
+[INFO]  2024/05/19 17:11:18 main.go:39: Server started on port 8080
+[INFO]  2024/05/19 17:54:54 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 09:09:49 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 09:20:50 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 09:22:39 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 09:23:05 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 09:23:52 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 09:24:27 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 09:25:30 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 10:05:00 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 10:34:11 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 11:34:46 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 11:35:31 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 11:36:34 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 11:37:11 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 11:40:04 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 11:45:38 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 11:45:52 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 11:47:04 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 11:47:25 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 11:47:41 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 11:56:06 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 12:33:41 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 12:42:31 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 12:44:11 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 12:45:31 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 12:57:43 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 13:02:32 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 13:03:31 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 13:03:49 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 13:03:59 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 13:08:24 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 13:12:18 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 13:14:32 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 13:20:06 main.go:39: Server started on port 8080
+[ERROR]  2024/05/20 13:20:09 resume.go:26: Resume not created:  sql: converting argument $4 type: unsupported type models.User, a struct
+[INFO]  2024/05/20 13:21:41 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 13:21:44 resume.go:30: Resume created
+[INFO]  2024/05/20 13:22:45 resume.go:30: Resume created
+[INFO]  2024/05/20 13:27:41 resume.go:30: Resume created
+[INFO]  2024/05/20 14:34:49 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 14:36:56 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 14:37:15 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 14:48:08 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 14:48:33 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 14:49:04 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 14:49:27 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 14:50:26 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 14:51:19 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 14:56:19 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 15:03:57 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 15:04:18 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 15:04:32 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 15:07:10 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 15:10:34 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 15:35:33 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 15:40:57 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 15:47:24 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 15:47:50 main.go:39: Server started on port 8080
+[ERROR]  2024/05/20 15:47:55 resume.go:51: Resume not updated pq: invalid input syntax for type uuid: ""
+[INFO]  2024/05/20 16:01:59 main.go:39: Server started on port 8080
+[ERROR]  2024/05/20 16:02:01 resume.go:51: Resume not updated pq: invalid input syntax for type uuid: ""
+[INFO]  2024/05/20 16:02:30 main.go:39: Server started on port 8080
+[ERROR]  2024/05/20 16:02:32 resume.go:50: Resume not updated:  invalid character '}' looking for beginning of object key string
+[INFO]  2024/05/20 16:02:41 resume.go:60: Resume updated
+[INFO]  2024/05/20 16:04:22 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 16:16:50 main.go:39: Server started on port 8080
+[ERROR]  2024/05/20 16:16:57 resume.go:68: Resume not deleted pq: syntax error at or near "UPDATES"
+[INFO]  2024/05/20 16:17:10 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 16:17:11 resume.go:72: Resume deleted
+[INFO]  2024/05/20 17:04:40 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 17:45:36 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 17:54:14 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 17:54:18 company.go:30: Company created
+[INFO]  2024/05/20 17:54:42 company.go:30: Company created
+[INFO]  2024/05/20 17:55:10 company.go:30: Company created
+[INFO]  2024/05/20 17:55:29 company.go:30: Company created
+[INFO]  2024/05/20 17:57:20 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 18:02:44 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 18:02:46 company.go:57: Company updated
+[INFO]  2024/05/20 18:05:25 company.go:40: Company created
+[INFO]  2024/05/20 18:35:15 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 18:35:18 company.go:69: Company deleted
+[INFO]  2024/05/20 23:27:29 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 23:28:55 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 23:29:18 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 23:34:06 main.go:39: Server started on port 8080
+[ERROR]  2024/05/20 23:34:08 recruiter.go:26: Recruiter not created:  pq: got 5 parameters but the statement requires 6
+[INFO]  2024/05/20 23:34:48 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 23:34:52 recruiter.go:30: Recruiter created
+[INFO]  2024/05/20 23:41:12 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 23:42:36 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 23:42:45 main.go:39: Server started on port 8080
+[INFO]  2024/05/20 23:46:10 recruiter.go:42: Recruiter created
+[INFO]  2024/05/21 10:53:31 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 10:54:45 recruiter.go:42: Recruiter created
+[ERROR]  2024/05/21 10:57:43 recruiter.go:50: Recruiter not updated:  invalid character '}' looking for beginning of object key string
+[INFO]  2024/05/21 10:57:48 recruiter.go:60: Recruiter updated
+[INFO]  2024/05/21 10:59:06 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 10:59:08 recruiter.go:72: Recruiter deleted
+[INFO]  2024/05/21 11:03:18 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 11:10:12 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 11:11:01 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 11:11:17 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 11:13:27 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 11:16:24 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 11:16:43 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 11:23:12 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 11:23:47 vacancy.go:30: Vacancy created
+[ERROR]  2024/05/21 11:30:58 user.go:52: User not updated pq: invalid input syntax for type uuid: ""
+[INFO]  2024/05/21 11:31:03 user.go:56: User updated
+[INFO]  2024/05/21 11:34:57 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 11:35:34 vacancy.go:48: Vacancy updated
+[INFO]  2024/05/21 11:37:54 main.go:39: Server started on port 8080
+[ERROR]  2024/05/21 11:37:55 vacancy.go:56: Vacancy not deleted:  pq: column "deleted_at" is of type bigint but expression is of type timestamp with time zone
+[INFO]  2024/05/21 11:38:20 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 11:38:22 vacancy.go:60: Vacancy deleted
+[INFO]  2024/05/21 11:45:37 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 11:48:53 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 12:14:13 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 12:18:56 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 12:18:59 interview.go:30: Interview created
+[INFO]  2024/05/21 12:22:47 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 12:22:48 interview.go:30: Interview created
+[INFO]  2024/05/21 12:23:12 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 12:23:13 interview.go:30: Interview created
+[INFO]  2024/05/21 12:23:31 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 12:23:31 interview.go:30: Interview created
+[INFO]  2024/05/21 12:25:12 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 12:25:14 interview.go:30: Interview created
+[INFO]  2024/05/21 14:22:41 main.go:39: Server started on port 8080
+[ERROR]  2024/05/21 14:22:44 interview.go:26: Interview not created:  user is under 18 years old
+[INFO]  2024/05/21 14:23:02 main.go:39: Server started on port 8080
+[ERROR]  2024/05/21 14:23:04 interview.go:26: Interview not created:  pq: relation "resume" does not exist
+[INFO]  2024/05/21 14:23:35 main.go:39: Server started on port 8080
+[ERROR]  2024/05/21 14:23:37 interview.go:26: Interview not created:  sql: no rows in result set
+[ERROR]  2024/05/21 14:27:49 interview.go:26: Interview not created:  sql: no rows in result set
+[ERROR]  2024/05/21 14:29:02 interview.go:26: Interview not created:  sql: no rows in result set
+[INFO]  2024/05/21 14:37:57 main.go:39: Server started on port 8080
+[ERROR]  2024/05/21 14:37:59 interview.go:26: Interview not created:  pq: missing FROM-clause entry for table "r"
+[INFO]  2024/05/21 14:38:11 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 14:38:11 interview.go:30: Interview created
+[INFO]  2024/05/21 14:43:59 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 14:44:05 interview.go:30: Interview created
+[INFO]  2024/05/21 14:46:31 resume.go:60: Resume updated
+[INFO]  2024/05/21 14:47:33 interview.go:30: Interview created
+[INFO]  2024/05/21 14:49:56 interview.go:30: Interview created
+[INFO]  2024/05/21 14:50:13 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 14:50:19 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 14:50:20 interview.go:30: Interview created
+[INFO]  2024/05/21 14:51:09 interview.go:30: Interview created
+[ERROR]  2024/05/21 14:52:06 interview.go:26: Interview not created:  user is under 18 years old
+[ERROR]  2024/05/21 14:53:41 interview.go:26: Interview not created:  user has different position
+[ERROR]  2024/05/21 14:54:30 interview.go:26: Interview not created:  user is under 18 years old
+[INFO]  2024/05/21 14:56:31 interview.go:42: Interview updated
+[INFO]  2024/05/21 14:57:08 interview.go:42: Interview updated
+[INFO]  2024/05/21 15:07:02 main.go:39: Server started on port 8080
+[ERROR]  2024/05/21 15:07:04 interview.go:44: Interview not updated:  sql: no rows in result set
+[INFO]  2024/05/21 15:07:40 main.go:39: Server started on port 8080
+[ERROR]  2024/05/21 15:07:43 interview.go:44: Interview not updated:  sql: no rows in result set
+[INFO]  2024/05/21 15:08:33 main.go:39: Server started on port 8080
+[ERROR]  2024/05/21 15:08:34 interview.go:44: Interview not updated:  sql: no rows in result set
+[INFO]  2024/05/21 15:08:56 main.go:39: Server started on port 8080
+[ERROR]  2024/05/21 15:08:57 interview.go:44: Interview not updated:  sql: no rows in result set
+[ERROR]  2024/05/21 15:11:06 interview.go:44: Interview not updated:  sql: no rows in result set
+[INFO]  2024/05/21 15:11:14 interview.go:48: Interview updated
+[ERROR]  2024/05/21 15:11:45 interview.go:44: Interview not updated:  sql: no rows in result set
+[ERROR]  2024/05/21 15:12:15 interview.go:44: Interview not updated:  sql: no rows in result set
+[INFO]  2024/05/21 15:12:27 interview.go:48: Interview updated
+[INFO]  2024/05/21 15:12:45 interview.go:48: Interview updated
+[INFO]  2024/05/21 15:14:14 interview.go:48: Interview updated
+[INFO]  2024/05/21 15:15:28 interview.go:60: Interview deleted
+[INFO]  2024/05/21 15:16:46 interview.go:48: Interview updated
+[INFO]  2024/05/21 15:18:11 user.go:68: User deleted
+[INFO]  2024/05/21 15:32:26 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 15:37:32 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 15:40:43 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 15:42:53 main.go:39: Server started on port 8080
+[INFO]  2024/05/21 15:46:09 main.go:39: Server started on port 8080
+[ERROR]  2024/05/21 15:50:24 interview.go:26: Interview not created:  user has different position
+[INFO]  2024/05/21 15:55:02 vacancy.go:61: Vacancy updated
+[ERROR]  2024/05/21 15:55:35 vacancy.go:39: Vacancy not created:  pq: invalid input syntax for type uuid: ""
+[ERROR]  2024/05/21 15:56:58 vacancy.go:39: Vacancy not created:  pq: invalid input syntax for type uuid: ""
+[ERROR]  2024/05/21 15:57:10 vacancy.go:39: Vacancy not created:  pq: invalid input syntax for type uuid: ""
+[ERROR]  2024/05/21 15:57:35 vacancy.go:39: Vacancy not created:  pq: invalid input syntax for type uuid: ""
+[ERROR]  2024/05/21 15:58:25 interview.go:26: Interview not created.:  user is under 18 years old
+[INFO]  2024/05/21 16:36:03 main.go:39: Server. started on port 8080
+[INFO]  2024/05/23 17:14:08 main.go:37: Server started on port 8090
+[INFO]  2024/05/23 17:32:57 main.go:37: Server started on port 8090
+[INFO]  2024/05/23 17:36:15 main.go:37: Server started on port 8090
+[INFO]  2024/05/23 17:39:55 main.go:37: Server started on port :8090
+[INFO]  2024/05/23 18:13:49 main.go:37: Server started on port :8090
+[INFO]  2024/05/23 18:38:20 company.go:57: Company updated
