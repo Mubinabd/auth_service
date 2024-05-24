@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-
 	db, err := sql.Open("postgres",
 		`postgres://postgres:pass@localhost:5432/postgres?sslmode=disable`)
 	if err != nil {
@@ -17,3 +16,5 @@ func main() {
 	// Listen and serve on 0.0.0.0:8080
 	r.Run(":8080") // listen and serve on 0.0.0.0:8080
 }
+
+// Config, Log, Swagger

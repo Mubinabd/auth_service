@@ -14,7 +14,7 @@ func NewHandler(car *postgres.CarRepo) *handler {
 	return &handler{car}
 }
 
-func Handler(car *postgres.CarRepo) *http.Server {
+func NewGin(car *postgres.CarRepo) *http.Server {
 	mux := http.NewServeMux()
 
 	handler := NewHandler(car)
