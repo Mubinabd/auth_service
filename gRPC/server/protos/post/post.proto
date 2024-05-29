@@ -1,0 +1,18 @@
+syntax="proto3";
+
+package post;
+
+service PostService{
+    rpc CreatePost(PostReq)  returns(PostRes){}
+}
+
+message PostReq{
+    string title = 1;
+}
+
+message PostRes{
+    int32 id = 1;
+    string title = 2;
+}
+
+
