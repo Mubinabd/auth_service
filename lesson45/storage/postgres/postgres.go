@@ -9,6 +9,7 @@ import (
 type Storage struct {
 	Db      *sql.DB
 	CoffeeS *CoffeeRepo
+	Courier *CourierRepo
 }
 
 func NewPostgresStorage() (*Storage, error) {
@@ -22,7 +23,8 @@ func NewPostgresStorage() (*Storage, error) {
 		return nil, err
 	}
 	cf := NewCoffeeRepo(db)
-	return &Storage{Db: db, CoffeeS: cf}, err
+	cr := NewCourierRepo(db)
+	return &Storage{Db: db, CoffeeS: cf, Courier: cr}, err
 }
 
 //func (s *Storage) Coffee() storage.CoffeeI {

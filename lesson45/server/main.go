@@ -2,6 +2,7 @@ package main
 
 import (
 	pb "github.com/husanmusa/NT_Golang_10/lesson45/genproto/coffee"
+	pbcr "github.com/husanmusa/NT_Golang_10/lesson45/genproto/courier"
 	"github.com/husanmusa/NT_Golang_10/lesson45/service"
 	"github.com/husanmusa/NT_Golang_10/lesson45/storage/postgres"
 	"google.golang.org/grpc"
@@ -22,6 +23,8 @@ func main() {
 
 	s := grpc.NewServer()
 	pb.RegisterCoffeeServiceServer(s, service.NewCoffeeService(db))
+	pbcr.RegisterCourierServiceServer(s, service.NewCourierService(db))
+
 	log.Printf("server listening at %v", liss.Addr())
 	if err := s.Serve(liss); err != nil {
 		log.Fatalf("failed to serve: %v", err)

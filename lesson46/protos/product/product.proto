@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option go_package = "genproto/product/";
+
+package product;
+
+import "category.proto";
+
+service ProductService {
+  rpc Create(ProductCreateReq) returns (Void) {}
+  rpc GetById(ById) returns (Product) {}
+  rpc GetAll(Filter) returns (ProductGetAllResp) {}
+  rpc Update(ById) returns (Void) {}
+  rpc Delete(ById) returns (Void) {}
+}
+
+message Product {
+  string Id = 1;
+  string name = 2;
+  int32 price = 3;
+  Category category = 4;
+  string expired_at = 5;
+}
+
+message ProductCreateReq {
+  string Id = 1;
+  string name = 2;
+  int32 price = 3;
+  string category_id = 4;
+  string expired_at = 5;
+}
+
+message ProductGetAllResp {
+  repeated Product products = 1;
+}

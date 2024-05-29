@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "genproto/courier/";
+
+package courier;
+
+service CourierService {
+  rpc Deliver(TakeOrder) returns (DeliverOrder) {}
+}
+
+message TakeOrder {
+  string name    = 1;
+  bool is_paid   = 3;
+  string address = 2;
+}
+
+message DeliverOrder {
+  string   time             = 1;
+  repeated Product products = 2;
+}
+
+message Product {
+  string id = 1;
+  string name = 2;
+}

@@ -7,15 +7,6 @@ import (
 	"github.com/husanmusa/NT_Golang_10/lesson45/storage/postgres"
 )
 
-var coffees = map[string]struct {
-	Price  int32
-	Volume int32
-}{
-	"latte":           {17000, 40},
-	"cappucino":       {17000, 50},
-	"double expresso": {13000, 80},
-}
-
 type coffeeService struct {
 	//stg storage.StorageI
 	stg postgres.Storage
