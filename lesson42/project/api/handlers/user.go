@@ -7,6 +7,18 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// GetUser godoc
+// @ID get_user
+// @Router /user/{id} [GET]
+// @Summary Get User
+// @Description GEt User
+// @Tags User
+// @Accept json
+// @Produce json
+// @Param user path string true "id"
+// @Success 200 {object} models.User "User data"
+// @Response 400 {object} string "Bad Request"
+// @Failure 500 {object} string "Server Error"
 func (h *HTTPHandler) GetUser(c *gin.Context) {
 	id := c.Param("id")
 	user, err := h.UM.GetUserByID(id)
@@ -30,6 +42,18 @@ func (h *HTTPHandler) GetAllUsers(c *gin.Context) {
 	c.JSON(http.StatusOK, users)
 }
 
+// CreateUser godoc
+// @ID create_user
+// @Router /user [POST]
+// @Summary Create User
+// @Description Create User
+// @Tags User
+// @Accept json
+// @Produce json
+// @Param user body models.UserCreated true "UserRequest"
+// @Success 201 {object} string "User data"
+// @Response 400 {object} string "Bad Request"
+// @Failure 500 {object} string "Server Error"
 func (h *HTTPHandler) CreateUser(c *gin.Context) {
 	var user models.UserCreated
 	c.BindJSON(&user)
@@ -39,6 +63,7 @@ func (h *HTTPHandler) CreateUser(c *gin.Context) {
 		h.Logger.ERROR.Println("User not created: ", err.Error())
 		return
 	}
+
 	c.String(200, "User created")
 	h.Logger.INFO.Println("User created")
 }

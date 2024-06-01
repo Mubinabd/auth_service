@@ -3,13 +3,14 @@ package postgres
 import (
 	"database/sql"
 	"fmt"
+	"github.com/husanmusa/NT_Golang_10/lesson45/storage"
 	_ "github.com/lib/pq"
 )
 
 type Storage struct {
-	Db      *sql.DB
-	CoffeeS *CoffeeRepo
-	Courier *CourierRepo
+	Db       *sql.DB
+	CoffeeS  storage.CoffeeI
+	CourierS storage.CourierI
 }
 
 func NewPostgresStorage() (*Storage, error) {
@@ -22,15 +23,23 @@ func NewPostgresStorage() (*Storage, error) {
 	if err != nil {
 		return nil, err
 	}
-	cf := NewCoffeeRepo(db)
-	cr := NewCourierRepo(db)
-	return &Storage{Db: db, CoffeeS: cf, Courier: cr}, err
+	//cf := NewCoffeeRepo(db)
+	//cr := NewCourierRepo(db)
+	return &Storage{Db: db}, err
 }
 
-//func (s *Storage) Coffee() storage.CoffeeI {
-//	if s.CoffeeS == nil {
-//		s.CoffeeS = &CoffeeRepo{s.Db}
-//	}
-//
-//	return s.CoffeeS
-//}
+func (s *Storage) Coffee() storage.CoffeeI {
+	if s.CoffeeS == nil {
+		s.CoffeeS = NewCoffeeRepo(s.Db)
+	}
+
+	return s.CoffeeS
+}
+
+func (s *Storage) Courier() storage.CourierI {
+	if s.CourierS == nil {
+		s.CourierS = NewCourierRepo(s.Db)
+	}
+
+	return s.CourierS
+}

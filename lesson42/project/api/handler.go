@@ -1,14 +1,16 @@
 package api
 
 import (
-	"project/api/handlers"
-
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
+	_ "project/api/docs"
+	"project/api/handlers"
 )
 
 func NewGin(h *handlers.HTTPHandler) *gin.Engine {
 	r := gin.Default()
-
+	r.GET("/api/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	user := r.Group("/user")
 	user.GET("/:id", h.GetUser)
 	user.POST("/", h.CreateUser)

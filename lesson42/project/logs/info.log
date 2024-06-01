@@ -25095,3 +25095,15 @@
 [INFO]  2024/05/23 18:38:20 company.go:91: Company updated
 [INFO]  2024/05/23 18:38:31 company.go:14: 5c41a8a0-562e-449d-afcb-1c62ff0718e9
 [INFO]  2024/05/23 18:38:31 company.go:25: {5c41a8a0-562e-449d-afcb-1c62ff0718e9 bro Tashkent 45}
+[INFO]  2024/05/31 18:13:15 main.go:39: Server started on port 8080
+[INFO]  2024/05/31 18:16:13 main.go:39: Server started on port 8080
+[INFO]  2024/05/31 18:16:47 main.go:39: Server started on port 8080
+[INFO]  2024/05/31 18:18:35 main.go:39: Server started on port 8080
+[INFO]  2024/05/31 18:19:30 main.go:39: Server started on port 8080
+[ERROR]  2024/05/31 18:19:41 user.go:51: User not created:  pq: invalid input syntax for type timestamp: "string"
+[ERROR]  2024/05/31 18:20:24 user.go:51: User not created:  pq: invalid input value for enum gender_type: "string"
+[INFO]  2024/05/31 18:20:30 user.go:56: User created
+[INFO]  2024/05/31 18:23:07 main.go:39: Server started on port 8080
+[INFO]  2024/05/31 18:23:29 main.go:39: Server started on port 8080
+[INFO]  2024/05/31 18:24:10 main.go:39: Server started on port 8080
+[INFO]  2024/05/31 18:24:33 main.go:39: Server started on port 8080

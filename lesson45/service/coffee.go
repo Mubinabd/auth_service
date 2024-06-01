@@ -5,16 +5,18 @@ import (
 	"fmt"
 	pb "github.com/husanmusa/NT_Golang_10/lesson45/genproto/coffee"
 	"github.com/husanmusa/NT_Golang_10/lesson45/storage/postgres"
+	"github.com/husanmusa/NT_Golang_10/lesson45/storage/redis"
 )
 
 type coffeeService struct {
 	//stg storage.StorageI
-	stg postgres.Storage
+	stg  postgres.Storage
+	stgR redis.Storage
 	pb.UnimplementedCoffeeServiceServer
 }
 
-func NewCoffeeService(stg *postgres.Storage) *coffeeService {
-	return &coffeeService{stg: *stg}
+func NewCoffeeService(stg *postgres.Storage, stgR redis.Storage) *coffeeService {
+	return &coffeeService{stg: *stg, stgR: stgR}
 }
 
 func (c *coffeeService) BuyingCoffee(ctx context.Context, coffee *pb.BuyCoffee) (*pb.PreparedCoffee, error) {

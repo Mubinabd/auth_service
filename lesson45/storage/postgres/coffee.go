@@ -14,6 +14,7 @@ func NewCoffeeRepo(db *sql.DB) *CoffeeRepo {
 }
 
 func (c *CoffeeRepo) SelectCoffee(coffee *pb.BuyCoffee) (*pb.PreparedCoffee, error) {
+
 	res := pb.PreparedCoffee{}
 	err := c.db.QueryRow("select name, volume, price from coffee where name = $1", coffee.GetName()).
 		Scan(&res.Name, &res.Volume, &res.Price)
