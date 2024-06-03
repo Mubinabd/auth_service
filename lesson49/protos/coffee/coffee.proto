@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "genproto/coffee/";
+
+package coffee;
+
+service CoffeeService {
+  rpc BuyingCoffee(BuyCoffee) returns (PreparedCoffee) {}
+}
+
+message BuyCoffee {
+  string name = 1;
+  bool is_paid = 2;
+}
+
+message PreparedCoffee {
+  string name = 1;
+  int32 volume = 2;
+  int32 price = 3;
+}
