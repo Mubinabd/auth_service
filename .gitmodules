@@ -1,0 +1,3 @@
+[submodule "lesson45/go10-proto"]
+	path = lesson45/go10-proto
+	url = git@github.com:husanmusa/go10-proto.git

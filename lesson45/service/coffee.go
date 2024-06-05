@@ -5,18 +5,17 @@ import (
 	"fmt"
 	pb "github.com/husanmusa/NT_Golang_10/lesson45/genproto/coffee"
 	"github.com/husanmusa/NT_Golang_10/lesson45/storage/postgres"
-	"github.com/husanmusa/NT_Golang_10/lesson45/storage/redis"
 )
 
 type coffeeService struct {
 	//stg storage.StorageI
-	stg  postgres.Storage
-	stgR redis.Storage
+	stg postgres.Storage
+	//stgR redis.Storage
 	pb.UnimplementedCoffeeServiceServer
 }
 
-func NewCoffeeService(stg *postgres.Storage, stgR redis.Storage) *coffeeService {
-	return &coffeeService{stg: *stg, stgR: stgR}
+func NewCoffeeService(stg *postgres.Storage) *coffeeService {
+	return &coffeeService{stg: *stg}
 }
 
 func (c *coffeeService) BuyingCoffee(ctx context.Context, coffee *pb.BuyCoffee) (*pb.PreparedCoffee, error) {
@@ -24,7 +23,7 @@ func (c *coffeeService) BuyingCoffee(ctx context.Context, coffee *pb.BuyCoffee) 
 		return nil, fmt.Errorf("coffee is not paid")
 	}
 
-	res, err := c.stg.CoffeeS.SelectCoffee(coffee)
+	res, err := c.stg.Coffee().SelectCoffee(coffee)
 	if err != nil {
 		return nil, err
 	}

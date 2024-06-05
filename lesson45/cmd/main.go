@@ -1,8 +1,8 @@
 package main
 
 import (
+	pb "github.com/husanmusa/NT_Golang_10/lesson45/genproto/coffee"
 	pbcr "github.com/husanmusa/NT_Golang_10/lesson45/genproto/courier"
-	"github.com/husanmusa/NT_Golang_10/lesson45/grpc/client"
 	"github.com/husanmusa/NT_Golang_10/lesson45/service"
 	"github.com/husanmusa/NT_Golang_10/lesson45/storage/postgres"
 	"google.golang.org/grpc"
@@ -16,10 +16,10 @@ func main() {
 		log.Fatal(err)
 	}
 
-	services, err := client.NewGrpcClients()
-	if err != nil {
-		log.Fatalln(err)
-	}
+	//services, err := client.NewGrpcClients()
+	//if err != nil {
+	//	log.Fatalln(err)
+	//}
 
 	liss, err := net.Listen("tcp", ":50051")
 	if err != nil {
@@ -28,7 +28,7 @@ func main() {
 
 	s := grpc.NewServer()
 
-	//pb.RegisterCoffeeServiceServer(s, service.NewCoffeeService(db, rdb))
+	pb.RegisterCoffeeServiceServer(s, service.NewCoffeeService(db))
 
 	pbcr.RegisterCourierServiceServer(s, service.NewCourierService(db))
 

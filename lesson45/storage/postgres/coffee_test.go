@@ -22,4 +22,5 @@ func TestSelectCoffee(t *testing.T) {
 	if !reflect.DeepEqual(r, resp) {
 		t.Errorf("SelectCoffee(%v) returned %v\nwant %v", req, r, resp)
 	}
+
 }
