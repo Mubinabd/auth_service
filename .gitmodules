@@ -1,3 +1,6 @@
 [submodule "lesson45/go10-proto"]
 	path = lesson45/go10-proto
 	url = git@github.com:husanmusa/go10-proto.git
+[submodule "Desktop/UserAuth/restaurant_protos"]
+	path = Desktop/UserAuth/restaurant_protos
+	url = git@github.com:Mubinabd/restaurant_protos.git
