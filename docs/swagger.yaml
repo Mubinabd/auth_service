@@ -1,3 +1,4 @@
+basePath: /user
 definitions:
   genproto.LoginReq:
     properties:
@@ -35,8 +36,9 @@ definitions:
     type: object
 info:
   contact: {}
+  title: UserAuth group swagger UI
 paths:
-  /user/info:
+  /info/{username}:
     get:
       consumes:
       - application/json
@@ -67,7 +69,7 @@ paths:
       summary: GET USER
       tags:
       - USER
-  /user/login:
+  /login:
     post:
       consumes:
       - application/json
@@ -93,7 +95,7 @@ paths:
       summary: Login USER
       tags:
       - USER
-  /user/register:
+  /register:
     post:
       consumes:
       - application/json
@@ -119,4 +121,9 @@ paths:
       summary: REGISTER USER
       tags:
       - USER
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
 swagger: "2.0"

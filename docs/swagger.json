@@ -1,10 +1,12 @@
 {
     "swagger": "2.0",
     "info": {
+        "title": "UserAuth group swagger UI",
         "contact": {}
     },
+    "basePath": "/user",
     "paths": {
-        "/user/info": {
+        "/info/{username}": {
             "get": {
                 "security": [
                     {
@@ -53,7 +55,7 @@
                 }
             }
         },
-        "/user/login": {
+        "/login": {
             "post": {
                 "description": "This api logs  user in",
                 "consumes": [
@@ -93,7 +95,7 @@
                 }
             }
         },
-        "/user/register": {
+        "/register": {
             "post": {
                 "description": "This api registers user",
                 "consumes": [
@@ -187,6 +189,13 @@
                     "type": "string"
                 }
             }
+        }
+    },
+    "securityDefinitions": {
+        "BearerAuth": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
         }
     }
 }

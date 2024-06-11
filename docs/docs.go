@@ -15,7 +15,7 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/user/info": {
+        "/info/{username}": {
             "get": {
                 "security": [
                     {
@@ -64,7 +64,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/user/login": {
+        "/login": {
             "post": {
                 "description": "This api logs  user in",
                 "consumes": [
@@ -104,7 +104,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/user/register": {
+        "/register": {
             "post": {
                 "description": "This api registers user",
                 "consumes": [
@@ -199,6 +199,13 @@ const docTemplate = `{
                 }
             }
         }
+    },
+    "securityDefinitions": {
+        "BearerAuth": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
     }
 }`
 
@@ -206,9 +213,9 @@ const docTemplate = `{
 var SwaggerInfo = &swag.Spec{
 	Version:          "",
 	Host:             "",
-	BasePath:         "",
+	BasePath:         "/user",
 	Schemes:          []string{},
-	Title:            "",
+	Title:            "UserAuth group swagger UI",
 	Description:      "",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,

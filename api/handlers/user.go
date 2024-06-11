@@ -1,9 +1,13 @@
 package handlers
+
 import (
+	"log"
+
 	genproto "github.com/Mubinabd/auth_service/genproto"
 	"github.com/gin-gonic/gin"
 )
-// @Router 				/user/register [post]
+
+// @Router 				/register [post]
 // @Summary 			REGISTER USER
 // @Description		 	This api registers user
 // @Tags 				USER
@@ -25,7 +29,7 @@ func (h *Handler)RegisterUser(c *gin.Context) {
     }
     c.JSON(200, user)
 }
-// @Router 				/user/login [post]
+// @Router 				/login [post]
 // @Summary 			Login USER
 // @Description		 	This api logs  user in
 // @Tags 				USER
@@ -48,7 +52,7 @@ func (h *Handler)LoginUser(c *gin.Context) {
     c.JSON(200, token)
 }
 
-// @Router 				/user/info [get]
+// @Router 				/info/{username} [get]
 // @Summary 			GET USER
 // @Description		 	This api GETS user by username
 // @Tags 				USER
@@ -62,11 +66,9 @@ func (h *Handler)LoginUser(c *gin.Context) {
 func (h *Handler) GetUserInfo(c *gin.Context) {
 	var req genproto.ByUsername
 	username := c.Param("username")
+    log.Println(username)
 	req.Username = username
-    if err := c.ShouldBindJSON(&req); err!= nil {
-        c.JSON(400, gin.H{"error": err.Error()})
-        return
-    }
+    log.Println(req)
     user, err := h.UserService.GetUserInfo(&req)
     if err!= nil {
         c.JSON(400, gin.H{"error": err.Error()})
