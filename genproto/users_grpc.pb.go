@@ -19,19 +19,19 @@ import (
 const _ = grpc.SupportPackageIsVersion8
 
 const (
-	UserService_CreateUser_FullMethodName  = "/restaurant_protos.UserService/CreateUser"
-	UserService_GetUser_FullMethodName     = "/restaurant_protos.UserService/GetUser"
-	UserService_LoginUser_FullMethodName   = "/restaurant_protos.UserService/LoginUser"
-	UserService_UpdateUser_FullMethodName  = "/restaurant_protos.UserService/UpdateUser"
-	UserService_DeleteUser_FullMethodName  = "/restaurant_protos.UserService/DeleteUser"
-	UserService_GetAllUsers_FullMethodName = "/restaurant_protos.UserService/GetAllUsers"
+	UserService_RegisterUser_FullMethodName = "/restaurant_protos.UserService/RegisterUser"
+	UserService_GetUser_FullMethodName      = "/restaurant_protos.UserService/GetUser"
+	UserService_LoginUser_FullMethodName    = "/restaurant_protos.UserService/LoginUser"
+	UserService_UpdateUser_FullMethodName   = "/restaurant_protos.UserService/UpdateUser"
+	UserService_DeleteUser_FullMethodName   = "/restaurant_protos.UserService/DeleteUser"
+	UserService_GetAllUsers_FullMethodName  = "/restaurant_protos.UserService/GetAllUsers"
 )
 
 // UserServiceClient is the client API for UserService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type UserServiceClient interface {
-	CreateUser(ctx context.Context, in *UserCreate, opts ...grpc.CallOption) (*User, error)
+	RegisterUser(ctx context.Context, in *UserCreate, opts ...grpc.CallOption) (*User, error)
 	GetUser(ctx context.Context, in *ByUsername, opts ...grpc.CallOption) (*User, error)
 	LoginUser(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*Token, error)
 	UpdateUser(ctx context.Context, in *UserCreate, opts ...grpc.CallOption) (*Void, error)
@@ -47,10 +47,10 @@ func NewUserServiceClient(cc grpc.ClientConnInterface) UserServiceClient {
 	return &userServiceClient{cc}
 }
 
-func (c *userServiceClient) CreateUser(ctx context.Context, in *UserCreate, opts ...grpc.CallOption) (*User, error) {
+func (c *userServiceClient) RegisterUser(ctx context.Context, in *UserCreate, opts ...grpc.CallOption) (*User, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(User)
-	err := c.cc.Invoke(ctx, UserService_CreateUser_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, UserService_RegisterUser_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -111,7 +111,7 @@ func (c *userServiceClient) GetAllUsers(ctx context.Context, in *Void, opts ...g
 // All implementations must embed UnimplementedUserServiceServer
 // for forward compatibility
 type UserServiceServer interface {
-	CreateUser(context.Context, *UserCreate) (*User, error)
+	RegisterUser(context.Context, *UserCreate) (*User, error)
 	GetUser(context.Context, *ByUsername) (*User, error)
 	LoginUser(context.Context, *LoginReq) (*Token, error)
 	UpdateUser(context.Context, *UserCreate) (*Void, error)
@@ -124,8 +124,8 @@ type UserServiceServer interface {
 type UnimplementedUserServiceServer struct {
 }
 
-func (UnimplementedUserServiceServer) CreateUser(context.Context, *UserCreate) (*User, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CreateUser not implemented")
+func (UnimplementedUserServiceServer) RegisterUser(context.Context, *UserCreate) (*User, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RegisterUser not implemented")
 }
 func (UnimplementedUserServiceServer) GetUser(context.Context, *ByUsername) (*User, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetUser not implemented")
@@ -155,20 +155,20 @@ func RegisterUserServiceServer(s grpc.ServiceRegistrar, srv UserServiceServer) {
 	s.RegisterService(&UserService_ServiceDesc, srv)
 }
 
-func _UserService_CreateUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UserService_RegisterUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UserCreate)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServiceServer).CreateUser(ctx, in)
+		return srv.(UserServiceServer).RegisterUser(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: UserService_CreateUser_FullMethodName,
+		FullMethod: UserService_RegisterUser_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServiceServer).CreateUser(ctx, req.(*UserCreate))
+		return srv.(UserServiceServer).RegisterUser(ctx, req.(*UserCreate))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -271,8 +271,8 @@ var UserService_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*UserServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "CreateUser",
-			Handler:    _UserService_CreateUser_Handler,
+			MethodName: "RegisterUser",
+			Handler:    _UserService_RegisterUser_Handler,
 		},
 		{
 			MethodName: "GetUser",
