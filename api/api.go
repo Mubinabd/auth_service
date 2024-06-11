@@ -36,6 +36,7 @@ func NewGin(h *handlers.Handler) *gin.Engine {
 		user.POST("/register", h.RegisterUser)
 		user.GET("/info/:username", h.GetUserInfo)
 	}
+	
 	url := ginSwagger.URL("swagger/doc.json")
 	r.GET("swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, url))
 

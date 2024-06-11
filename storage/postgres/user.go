@@ -3,6 +3,8 @@ package postgres
 import (
 	"database/sql"
 	"errors"
+	// "log"
+
 	"github.com/Mubinabd/auth_service/token"
 
 	pb "github.com/Mubinabd/auth_service/genproto"
@@ -52,6 +54,7 @@ func (us *UserStorage) GetUserInfo(id *pb.ByUsername) (*pb.User,error) {
     if err!= nil {
         return nil, err
     }
+	// log.Println(user)
 
     return &user, nil
 }
