@@ -9,7 +9,6 @@ mig-up:
 mig-down:
 	migrate -path migrations -database ${DBURL} -verbose down
 
-
 mig-create:
 	migrate create -ext sql -dir migrations -seq create_table
 
