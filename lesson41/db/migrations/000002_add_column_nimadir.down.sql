@@ -1,1 +1,0 @@
-alter table nimadir drop column if exists name;

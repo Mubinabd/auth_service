@@ -1,1 +1,0 @@
-create table nimadir(id int);

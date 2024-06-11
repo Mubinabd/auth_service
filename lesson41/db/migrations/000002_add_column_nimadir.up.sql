@@ -1,1 +1,0 @@
-alter table nimadir add column if not exists name varchar;
