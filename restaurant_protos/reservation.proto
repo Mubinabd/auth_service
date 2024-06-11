@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option go_package = "/genproto";
+
+package restaurant_protos;
+
+import "common.proto";
+
+service ReservationService {
+    rpc CreateReservation(ReservationCreate) returns (Void) {}
+    rpc GetReservation(ById) returns (Reservation) {}
+    rpc UpdateReservation(ReservationCreate) returns (Void) {}
+    rpc DeleteReservation(ById) returns (Void) {}
+    rpc GetAllReservation(FilterByTime) returns (Reservations) {}
+}
+
+message ReservationCreate {
+    string Id = 1;
+    string User_id = 2;
+    string RestaurantId = 3;
+    string ReservationTime = 4;
+    string Status = 5;
+}
+
+message Reservation {
+    string User_id = 1;
+    string RestaurantId = 2;
+    string ReservationTime = 3;
+    string Status = 4;
+}
+
+message Reservations {
+    repeated Reservation Reservations = 1;
+}
+
+message FilterByTime {
+    string RestaurantId = 1;
+    string ReservationFrom = 2;
+    string ReservationTo = 3;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "/genproto";
+
+package restaurant_protos;
+
+message Void {}
+
+message ById {
+    string Id = 1;
+}
+
+message Filter {}
+

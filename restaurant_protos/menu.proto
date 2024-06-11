@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+
+option go_package = "/genproto";
+
+package restaurant_protos;
+
+import "common.proto";
+
+service MenuService {
+    rpc CreateMenu(Menu) returns (Void) {}
+    rpc UpdateMenu(Menu) returns (Void) {}
+    rpc DeleteMenu(ById) returns (Void) {}
+    rpc GetMenu(ById) returns (Menu) {}
+    rpc GetMenus(MenuFilter) returns (Menus) {}
+}
+message Menu {
+    string Id  = 1;
+    string RestaurantId = 2;
+    string Name = 3;
+    string Description = 4;
+    float Price = 5;
+}
+message Menus {
+    repeated Menu Menus = 1;
+}
+message MenuFilter {
+    string RestaurantId = 1;
+    float PriceFrom = 2;
+    float PriceTo = 3;
+}

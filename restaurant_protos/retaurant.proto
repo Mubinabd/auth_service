@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+
+option go_package = "/genproto";
+
+package restaurant_protos;
+
+import "common.proto";
+
+service RestaurantService {
+    rpc CreateRestaurant(CreateRestaurantReq) returns (Void) {}
+    rpc UpdateRestaurant(CreateRestaurantReq) returns (Void) {}
+    rpc DeleteRestaurant(ById) returns (Void) {}
+    rpc GetRestaurant(ById) returns (Restaurant) {}
+    rpc GetAllRestaurants(AddressFilter) returns (Restaurants) {}
+}
+
+message CreateRestaurantReq {
+    string Id = 1;
+    string Name = 2;
+    string Address = 3;
+    string PhoneNumber = 4;
+    string Description = 5;
+}
+message Restaurant {
+    string Name = 1;
+    string Address = 2;
+    string PhoneNumber = 3;
+    string Description = 4;
+}
+
+message Restaurants {
+    repeated Restaurant Restaurants = 1;
+}
+message AddressFilter {
+    string Address = 1;
+}
+

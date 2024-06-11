@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+
+option go_package = "/genproto";
+
+package restaurant_protos;
+
+import "common.proto";
+
+service PaymentService {
+    rpc CreatePayment(PaymentCreate) returns (Payment) {}
+    rpc GetPayment(ById) returns (Payment) {}
+    rpc UpdatePayment(PaymentCreate) returns (Payment) {}
+    rpc DeletePayment(ById) returns (Void) {}
+    rpc GetPayments(PaymentFilter) returns (Payments) {}
+}
+
+message PaymentCreate {
+    string Id = 1;
+    string ReservationId = 2;
+    string PaymentMethod = 3;
+    string PaymentStatus = 4;
+
+}
+message Payment {
+    string Id = 1;
+    string ReservationId = 2;
+    float Amount = 3;
+    string PaymentMethod = 4;
+    string PaymentStatus = 5;
+}
+message PaymentFilter {
+    string PaymentMethod = 1;
+    float AmountFrom = 2;
+    float AmountTo = 3;
+    string PaymentStatus = 4;
+}
+message Payments {
+    repeated Payment Payments = 1;
+}
