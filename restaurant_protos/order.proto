@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "/genproto";
+
+package restaurant_protos;
+
+import "common.proto";
+
+service OrderService {
+    rpc CreateOrder(Order) returns (Void) {}
+    rpc GetOrder(ById) returns (Order) {}
+    rpc UpdateOrder(Order) returns (Void) {}
+    rpc DeleteOrder(ById) returns (Void) {}
+    rpc GetAllOrders(Void) returns (Orders) {}
+}
+
+message Order {
+    string Id = 1;
+    string ReservationId = 2;
+    string MenuItemId = 3;
+    int32 Quantity = 4;
+}
+message Orders {
+    repeated Order Orders = 1;
+}
