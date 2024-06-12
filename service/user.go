@@ -13,6 +13,7 @@ type UserService struct {
 func NewUserService(storage storage.StorageI) *UserService {
 	return &UserService{
 		storage: storage,
+		
 	}
 }
 
